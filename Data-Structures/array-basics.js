@@ -220,3 +220,50 @@ console.log(points);
 points.sort(function(a,b) {return b-a}) //descending order
 console.log(points);
 
+////////////////////////Questions
+///Ques 1 - Second Largest Number
+// Given an array Arr of size N,print second largest distinct element from an array.
+//Input: [12,35,1,10,34,1] ---->>>> Output: 34
+//Input: [10,5,10]  ------->>> Output: 5
+
+let array = [12, 1, 10, 35, 34, 1];
+//let array = [10, 5, 10];
+
+//////APPROACH-1 using sorting array in ascending order and return second element which is not equal to largest element from the sorted array
+function secondLargestArray(array) {
+  if (array.length < 1) console.log("Array is not valid");
+
+
+  array.sort(function (a, b) {
+    return a - b;
+  });
+
+  for (let i = array.length - 2; i >= 0; i--) {
+    if (array[i] != array[array.length - 1]) {
+      console.log("The second largest element of given array is :" + array[i]);
+      return;
+    }
+  }
+
+  console.log("There is no second largest element");
+}
+
+secondLargestArray(array);
+
+//////APPROACH-2 using set approach to remove duplicates
+let s = new Set(array);
+array = []
+
+//console.log(s);
+for(let val of s){
+  array.push(val)
+}
+
+console.log(array);
+
+array.sort();
+s.clear();
+
+console.log('The second largest element in given array is : ' + array[array.length-2]);
+
+
