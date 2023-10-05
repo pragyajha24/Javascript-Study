@@ -266,4 +266,26 @@ s.clear();
 
 console.log('The second largest element in given array is : ' + array[array.length-2]);
 
+//////////Ques2 - Rotate Array by K
+//Given an integer array nums,rotate the array to the right by k steps, where k is non - negative.
+//Input: nums = [1,2,3,4,5,6,7], k = 3 ------>>>>> Output: [5,6,7,1,2,3,4]
+//Input: nums = [-1,-100,3,999], k = 2 ------>>>>> Output: [3,99,-1,-100]
+
+//Explaination-
+//[1,2,3,4,5,6,7] => [7,1,2,3,4,5,6] => [6,7,1,2,3,4,5] => [5,6,7,1,2,3,4]
+
+let Karray=[1,2,3,4,5,6,7]
+function rotateArray(Karray,k){
+if (k > Karray.length){
+  k = k % Karray.length
+}
+
+const rotated = Karray.splice(Karray.length - k , Karray.length); //[5,6,7]
+Karray.unshift(...rotated);
+
+return Karray;
+}
+
+console.log(rotateArray(Karray, 3));
+
 
