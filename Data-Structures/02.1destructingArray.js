@@ -2,12 +2,12 @@
 
 const arr = [1, 2, 3];
 
-//without destrcuting reteriving values
+//without destructing retrieving values
 const a = arr[0];
 const b = arr[1];
 const c = arr[2];
 
-//reteriving using destructing
+//retrieving using destructing
 //taking values of arr and storing in variables x,y,z
 const [x, y, z] = arr;
 console.log(x, y, z); //1,2,3
@@ -30,12 +30,12 @@ const restaurant = {
 const [first, second] = restaurant.categories;
 console.log(first, second); //Italian,Pizzeria
 
-//if we want to reterive elements which are not in order or have other values between them, then we just leave space for destrctuing operator
+//if we want to receive elements which are not in order or have other values between them, then we just leave space for destructuring operator
 
 let [main, , secondary] = restaurant.categories;
 console.log(main, secondary); //Italian,Vegetarian
 
-//swaping values or switch values between two without destructing
+//swapping values or switching values between two without destructing
 const temp = main;
 main = secondary;
 secondary = temp;
@@ -45,23 +45,23 @@ console.log(main, secondary);
 //switching variables using destructing
 [main, secondary] = [secondary, main];
 
-//now doing [main,secondary] = [secondary,main] means assign the value of the variable "secondary" to the variable "main" and the value of vaariable "main" to the variable "secondary".
-//REMEMBER whatever is on the right side of  '='  operator its value will be taken . And whatever is on the left side of it,will be considered as variable name.
+//now doing [main, secondary] = [secondary, main] means to assign the value of the variable "secondary" to the variable "main" and the value of variable "main" to the variable "secondary".
+//REMEMBER whatever is on the right side of  '='  operator its value will be taken. And whatever is on the left side of it,will be considered as the variable name.
 
 console.log(main, secondary);
 
-//returning values without destructing from order method in restaurant object
+//returning values without destructing from the order method in the restaurant object
 console.log(restaurant.order(2, 0)); //[ ' Garlic Bread', 'Pizza' ]
 
-//recieve two return values from function using destructing
+//receives two return values from a function using destructing
 const [starter, mainCourse] = restaurant.order(2, 0);
 console.log(starter, mainCourse); // Garlic Bread Pizza
 
 
 //Nested Destructuring
-//reterving values from nested array using destructing
+//retrieving values from a nested array using destructing
 const nested = [2,4,[5,6]];
-//reteriving first and third values without second
+//retrieving first and third values without second
 const [i , , j] = nested;
 console.log(i,j); //2 [5,6]
 
