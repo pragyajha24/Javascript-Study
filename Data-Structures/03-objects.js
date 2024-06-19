@@ -1,6 +1,6 @@
 "use strict";
 
-//Object is js are collection of key value pairs,where keys are strings, and values can be of any data type ,including other object.
+//Object is js are a collection of key-value pairs, where keys are strings, and values can be of any data type, including other objects.
 //creating objects
 const peter = {
   firstName: "Peter",
@@ -12,7 +12,7 @@ const peter = {
 
 console.log(peter);
 
-//using dot notation to reterive property from object
+//using dot notation to retrieve property from object
 console.log(peter.lastName);
 
 //using bracket notation to reterive data we have to use string in it
