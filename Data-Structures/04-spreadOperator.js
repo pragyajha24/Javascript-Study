@@ -1,11 +1,11 @@
 "use strict";
 
 //Spread Operator (...)
-//We use spread operator to basically expand an array into all its elements.
+//We use a spread operator to basically expand an array into all its elements.
 
 // for example
 const arr = [7, 8, 9];
-//if we had to elements in beginning of this array,we would something like this not using spread operator
+//if we had to add elements in beginning of this array,we would something like this not using spread operator
 const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
 console.log(badNewArr); //[ 1, 2, 7, 8, 9 ]
 
