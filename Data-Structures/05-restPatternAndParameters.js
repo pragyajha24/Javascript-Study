@@ -64,10 +64,10 @@ const restaurant = {
   },
 };
 
-//We can use both rest and spread oon both side of assignment operator
+//We can use both rest and spread on both side of assignment operator
 
-//Rest pattern always must be the last in destructing assignment , otherwise how will javascript know until when it hould collect rest of the array.
-//And for same reason,there can  only be one rest in any destructing assignment.
+//Rest pattern always must be the last in destructing assignment , otherwise how will javascript know until when it hold collect rest of the array.
+//And for the same reason, there can  only be one rest in any destructing assignment.
 const [Pizza, , Risotto, ...otherFood] = [
   ...restaurant.mainMenu,
   ...restaurant.starterMenu,
@@ -79,7 +79,7 @@ const { sat, ...weekdays } = restaurant.openingHours;
 console.log(weekdays); //{ thu: { open: 12, close: 22 }, fri: { open: 11, close: 23 } }
 
 //2) Functions
-//an example function conaining arbitrary amount of arguments and simply add all of them together
+//an example function containing arbitrary amount of arguments and simply add all of them together
 //we will use rest parameter
 //a working function which can accept any number of parameters
 const add = function (...numbers) {
@@ -98,6 +98,6 @@ const x = [24, 12];
 add(...x); //36
 
 //calling orderPizza method
-restaurant.orderPizza("brocooli","chicken","spinach","onion","cheese"); 
-//brocooli [ 'chicken', 'spinach', 'onion', 'cheese' ]
+restaurant.orderPizza("broccoli","chicken","spinach","onion","cheese"); 
+//broccoli [ 'chicken', 'spinach', 'onion', 'cheese' ]
 restaurant.orderPizza("mushroom") //mushroom []
