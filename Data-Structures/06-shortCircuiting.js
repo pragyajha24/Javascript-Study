@@ -1,6 +1,6 @@
 "use strict";
 
-//Short circuting operators (&& and ||) AND and OR
+//Short circuiting operators (&& and ||) AND and OR
 //Short circuting OR means that if the first value is true value,it will immediately return that first value.
 console.log("----------------------OR OPERATOR ------------------------");
 //If the first operand is true value in OR operator, then other operand would not even be evaluted.
@@ -11,7 +11,7 @@ console.log(undefined || null); // null (it checked undefined which is false val
 
 console.log(undefined || 0 || "" || "Hello" || 23 || null); //Hello
 
-//restaurat example
+//restaurant example
 const restaurant = {
   name: "Classico Italiano",
   location: "Via Angelo Tavanti 23, Firenze ,Italy",
@@ -66,7 +66,7 @@ const restaurant = {
   },
 };
 
-//without using short circuting checking the value
+//without using short circuiting checking the value
 //using ternary operator
 restaurant.numGuests = 0;
 const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
@@ -77,7 +77,7 @@ const guest2 = restaurant.numGuests || 10;
 console.log(guest2);
 
 console.log("-------------------------AND OPERATOR-------------------------");
-//And operator short circuits if the first value is false and then immedietly returns that false value without even evaluating the second operand.
+//And operator short circuits if the first value is false and then immediately returns that false value without even evaluating the second operand.
 //But if the operand is true then evaluation continues and last value is returned.
 console.log(0 && "James"); //0
 console.log(7 && "James"); //James
@@ -85,7 +85,7 @@ console.log(7 && "James"); //James
 console.log("Hello" && 23 && null && "james"); //null
 
 //Practical example
-//using if statment
+//using if statement
 if (restaurant.orderPizza) {
   restaurant.orderPizza("mushrooms", "spinach");
 }
