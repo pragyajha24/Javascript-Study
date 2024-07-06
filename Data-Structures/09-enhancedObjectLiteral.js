@@ -1,6 +1,6 @@
 "use strict";
 
-//restaurat example
+//restaurant example
 // const restaurant = {
 //   name: "Classico Italiano",
 //   location: "Via Angelo Tavanti 23, Firenze ,Italy",
@@ -56,7 +56,7 @@
 // };
 
 // -------------ENHANCED OBJECT LITERAL SYNTAX ------------------
-//1.let's have a object outside restaurant object ,now openingHours is seperate variable
+//1.let's have an object outside restaurant object ,now openingHours is seperate variable
 // but we still want openingHours object inside of restaurant object
 
 //2. Second enhancment to object it about writing methods  ,in es6 we no longer have to create property and then said it to a function expression like we always do.
