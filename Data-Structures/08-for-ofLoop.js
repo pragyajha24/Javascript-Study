@@ -1,6 +1,6 @@
 "use strict";
 
-//restaurat example
+//restaurant example
 const restaurant = {
   name: "Classico Italiano",
   location: "Via Angelo Tavanti 23, Firenze ,Italy",
@@ -32,12 +32,12 @@ const restaurant = {
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 console.log(menu);
 
-//with for loop we will need a vairable ,assign it a value and then increment it but with for of loop it's more simple
+//with for loop we will need a variable,assign it a value and then increment it but with for of loop it's more simple
 
-//for-of loop will automatically loop over the entire array and in each iteration it will give us access to the current array element which we can specify in form of vairable we take.Like in this case we named it item, we can name it anything we want.
+//for-of loop will automatically loop over the entire array and in each iteration, it will give us access to the current array element which we can specify in form of vairable we take.Like in this case we named it item, we can name it anything we want.
 for (const item of menu) console.log(item);
 
-// now,if we want index of element in array
+// now, if we want the index of an element in the array
 for (const item of menu.entries()) {
   // console.log(item);
   console.log(`${item[0] + 1}: ${item[1]}`);
