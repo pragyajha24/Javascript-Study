@@ -1,7 +1,7 @@
 "use strict";
 
-//functions returing function  - currying
-// Currying is an advanced technique of working with functions. It’s used not only in JavaScript, but in other languages as well.
+//functions returning function  - currying
+// Currying is an advanced technique of working with functions. It’s used not only in JavaScript but in other languages as well.
 // Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).
 // Currying doesn’t call a function. It just transforms it.
 
@@ -68,13 +68,13 @@ function fun() {
 
 fun();
 
-//The task to call a function that returns another function with the help of Javascript is called currying function,a function with numerous arguments that can be converted into series of nesting functions with the help of the currying method.
+//The task to call a function that returns another function with the help of Javascript is called a currying function,a function with numerous arguments that can be converted into series of nesting functions with the help of the currying method.
 //Approach:
 //1.Define outer function:
 //Create an outer function that takes parameters and contains the logic for processing or initializing data.
 
 //2.Return Inner Function:
-//Inside the outer function,return another function (inner function).This inner function can access variables and paramters from the outer function due to closure.
+//Inside the outer function,return another function (inner function).This inner function can access variables and parameters from the outer function due to closure.
 
 //3.Call Outer function:
 //Call the outer function to obtain the inner function.Assign the result to a variable if needed.
