@@ -1,15 +1,13 @@
 "use strict";
 
-const diameter = 287_460_000_000;
-console.log(diameter);//287460000000
+//remainder operator returns the remainder of a division
+console.log(5 % 2); //1
+console.log(8 % 3); //2
 
-//improves readability
-const price = 763_99;
-console.log(price);//76399
+const isEven = function(n){
+    return n % 2 === 0;
+}
 
-//it ignores the underscore, which means we can use place underscores anywhere in our code to make it more readable withour changing the output.
+console.log(isEven(8)); //true
+console.log(isEven(21)); //false
 
-//not in beginning of a number
-//not in end of a number
-//not put two in a row
-//only after number not symbols
