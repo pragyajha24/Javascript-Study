@@ -5,7 +5,7 @@
 const peter = {
   firstName: "Peter",
   lastName: "Parker",
-  : 2044 - 1901,
+  birthYear: 2044 - 1901,
   job: "saving the world",
   friends: ["Wendy", "Tinker bell"],
 };
@@ -15,7 +15,7 @@ console.log(peter);
 //using dot notation to retrieve property from object
 console.log(peter.lastName);
 
-//using bracket notation to reterive data we have to use string in it
+//using bracket notation to receive data we have to use string in it
 console.log(peter["lastName"]);
 
 //another way of using bracket notation
