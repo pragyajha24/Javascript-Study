@@ -1,30 +1,4 @@
-"use strict";
-
-//created a variable,stored a string
-const airline = "Air Sweden";
-let plane = "A202";
-
-console.log(plane[0]);
-console.log(plane[1]);
-console.log(plane[2]);
-//another way
-console.log("A202"[3]);
-
-//length of a string
-console.log(airline.length); //10
-console.log("A202".length); //4
-
-//getting the position of ceratin letter in the string
-//strings are 0 based i.e. it start with 0 like arrays
-console.log(airline.indexOf("e")); //6
-//but this only gives us the first occurence but sometimes we may want the last one
-console.log(airline.lastIndexOf("e")); //8
-//also index of entire word - and this is case sensitive
-console.log(airline.indexOf("Sweden")); //4
-
-console.log("-----------------SLICE METHOD---------------------");
-
-//we can extract extact part of string using slice method
+ string using slice method
 ///here 4 is the begin parameter .So basically it's the position at which the extarction will start.
 console.log(airline.slice(4)); //Sweden :- and this string which we got here is called substring because it's just a part of the original string.This does not change the underlying string.
 //It's actually impossible to mutate strings.They are primitives.
