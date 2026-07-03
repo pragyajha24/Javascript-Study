@@ -74,3 +74,71 @@ console.log(staffUnique.length); // 3 --- it's an array now so we used lenth pro
 //set are not intened to replace array.
 //always when you have to manipulate data use array as array has lot of array methods.
 
+///New Operations using Sets
+const italianFoods = new Set([
+  "pasta",
+  "gnocchi",
+  "tomatoes",
+  "olive oil ",
+  "garlic",
+  "basil",
+]);
+
+const mexicoFoods = new Set([
+  "tortillas",
+  "beans",
+  "rice",
+  "tomatoes",
+  "avacado",
+  "garlic",
+]);
+
+//suppose we have application, in that application we needed to find out
+//ingredients are present in both italian and mexican
+
+//1. Insersection Method - finding common elements in two sets
+const commonFoods = italianFoods.intersection(mexicoFoods);
+console.log("Intersection Method");
+console.log(commonFoods); //Set(2) {'tomatoes', 'garlic'}
+
+//to get output in array, using spread operator to create new array from set
+console.log([...commonFoods]); //(2) ['tomatoes', 'garlic']
+
+//2.Union Method - gives all the element that are present in either of the sets
+//all the elements of both sets but without any duplicates
+const italianMexicanFusion = italianFoods.union(mexicoFoods);
+console.log("Union Method");
+console.log(italianMexicanFusion);
+//Set(10) {'pasta', 'gnocchi', 'tomatoes', 'olive oil ', 'garlic', …}
+
+//array to set to array
+//console.log(...[new Set([...italianFoods, ...mexicoFoods])]);
+
+//3.Difference Method - returns new set which will contain all the elements
+//present in first set,but not in second set
+//gives us all the elements that are unique in the first set
+//here the order we specify the set matters
+const uniqueItalianFood = italianFoods.difference(mexicoFoods);
+console.log("Difference Italian");
+console.log(uniqueItalianFood); //Set(4) {'pasta', 'gnocchi', 'olive oil ', 'basil'}
+
+const uniqueMexicanFood = mexicoFoods.difference(italianFoods);
+console.log("Difference Mexican");
+console.log(uniqueMexicanFood); //Set(4) {'tortillas', 'beans', 'rice', 'avacado'}
+
+//4.Symmetric Difference - returns all the elements that are present in
+//either set, but not in both. opposite of intersection method
+//unique elements in both the sets
+const uniqueItalianMexicanFood = italianFoods.symmetricDifference(mexicoFoods);
+console.log("Symmetric Difference");
+console.log(uniqueItalianMexicanFood); //Set(8) {'pasta', 'gnocchi', 'olive oil ', 'basil', 'tortillas', …}
+
+//5.isSubsetOf()
+//6.isSuperSetOf()
+//7.isDisjointFrom()- check whether one set is completely different from another set
+//i.e., if one set does not contain any elements of the other set
+
+//to check if one set is completely different from another set
+console.log(italianFoods.isDisjointFrom(mexicoFoods)); //false
+//becoz they have some elements in common
+
