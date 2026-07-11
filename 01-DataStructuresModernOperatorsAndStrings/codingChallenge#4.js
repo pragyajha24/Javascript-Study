@@ -29,12 +29,78 @@ Afterwards, test with your own test data!
 GOOD LUCK 😀
 */
 
-document.body.append(document.createElement('textarea'));
-document.body.append(document.createElement('button'));
+const textArea = document.createElement("textarea");
+document.body.append(textArea);
 
-const text = document.querySelector("textarea").value;
+textArea.placeholder = "Enter input string...";
+textArea.style.width = "15rem";
+textArea.style.padding = "2rem";
+textArea.style.height = "10rem";
 
-document.querySelector('button').addEventListener(' click',function(){
-const text = document.querySelector("textarea").value;
-console.log(text);
-})
+const btn = document.createElement("button");
+document.body.append(btn);
+
+btn.style.padding = "1.2rem 1.6rem ";
+btn.style.height = "1rem";
+
+btn.style.backgroundColor = "darkblue";
+btn.textContent = "Convert";
+btn.style.color = "#fff";
+btn.style.border = "none";
+btn.style.cursor = "pointer";
+
+const resultTextArea = document.createElement("textarea");
+document.body.append(resultTextArea);
+
+resultTextArea.style.width = "15rem";
+resultTextArea.style.padding = "2rem";
+resultTextArea.style.height = "10rem";
+resultTextArea.style.backgroundColor = "skyblue";
+
+document.body.style.margin = "2rem";
+document.body.style.display = "flex";
+document.body.style.flexDirection = "row";
+document.body.style.gap = "1.2rem";
+document.body.style.alignItems = "center";
+document.body.style.justifyContent = "center";
+
+btn.addEventListener("click", function () {
+  convertToCamelCase();
+});
+
+function convertToCamelCase() {
+  const input = textArea.value;
+  const str = input.split("\n");
+
+  let results = [];
+
+  for (const variable of str) {
+    const parts = variable.trim().toLowerCase().split("_");
+    //console.log(parts);
+
+    if (parts.length < 2) continue;
+    const camelCase = parts[1][0].toUpperCase() + parts[1].slice(1);
+    //console.log(camelCase);
+    const result = parts[0] + camelCase;
+    // console.log(result);
+    results.push(result);
+    //console.log(result);
+  }
+
+  const longest = Math.max(
+    ...results.map(function (result) {
+      return result.length;
+    }),
+  );
+  //console.log(longest);
+
+  let counter = 0;
+  resultTextArea.value = "";
+  for (const result of results) {
+    counter++;
+    const tick = "✅".repeat(counter);
+    console.log(result.padEnd(longest + 3) + tick);
+
+    resultTextArea.value += result.padEnd(longest + 3) + tick + "\n";
+  }
+}
